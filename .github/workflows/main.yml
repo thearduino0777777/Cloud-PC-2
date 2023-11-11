@@ -27,7 +27,7 @@ jobs:
     
     - name: Enable TS
     
-      run: Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server'-name "fDenyTSConnections" -Value 0
+      run: Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\TerminalServer'-name "fDenyTSConnections" -Value 0
     - run: Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
     - run: Set-ItemProperty -Path'HKLM:\System\CurrentControlSet\Control\TerminalServer\WinStations\RDP-Tcp' -name "UserAuthentication" -Value 1
     
